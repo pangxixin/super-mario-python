@@ -1,0 +1,30 @@
+[flake8]
+max-line-length = 88
+extend-ignore = E203, W503
+# E203: whitespace before ':' (compatible with Black style)
+# W503: line break before binary operator (compatible with Black style)
+# Other common ignores for Black compatibility (optional, but can be useful):
+# E501: line too long (handled by max-line-length, but sometimes good to be explicit if overriding Black's default for specific files)
+# E722: do not use bare 'except' (good practice, but sometimes project specific choices are made)
+
+# Example of per-file ignores if needed (not used for now):
+# [flake8:*/specific_file.py]
+# ignore = F401
+
+# Example of excluding directories (not used for now, but common for venv, build, etc.):
+# exclude =
+#     .git,
+#     __pycache__,
+#     build,
+#     dist,
+#     venv,
+#     .venv
+#     */migrations/*
+#     */tests/* # Depending on whether you want to lint tests with same strictness
+# count = True # Show count of errors
+# statistics = True # Show statistics about errors/warnings
+# show-source = True # Show source code for T000 messages (not relevant here)
+# format = %(path)s:%(row)d:%(col)d: %(code)s %(text)s
+# You can also specify plugins here if you install them, e.g.:
+# import-order-style = google
+# application-import-names = my_app,tests
